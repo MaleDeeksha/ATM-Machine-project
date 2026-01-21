@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+    <h1>🏦 ATM Dashboard</h1>
+    <p class="welcome">Welcome! Choose an option below</p>
+
+    <div class="cards">
+        <a href="{{ url_for('check_balance') }}" class="card balance">
+            <h2>Check Balance</h2>
+            <p>View your current balance</p>
+        </a>
+
+        <a href="{{ url_for('deposit') }}" class="card deposit">
+            <h2>Deposit</h2>
+            <p>Add money to your account</p>
+        </a>
+
+        <a href="{{ url_for('withdraw') }}" class="card withdraw">
+            <h2>Withdraw</h2>
+            <p>Withdraw cash securely</p>
+        </a>
+
+        <a href="{{ url_for('transactions') }}" class="card transactions">
+            <h2>Transactions</h2>
+            <p>View transaction history</p>
+        </a>
+
+        <a href="{{ url_for('change_pin') }}" class="card pin">
+            <h2>Change PIN</h2>
+            <p>Update your ATM PIN</p>
+        </a>
+
+        <a href="{{ url_for('logout') }}" class="card logout">
+            <h2>Logout</h2>
+            <p>Exit safely</p>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
